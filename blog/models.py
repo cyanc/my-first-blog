@@ -9,6 +9,7 @@ class Post (models.Model):
 	title = models.CharField(max_length=200)
 	slug = models.SlugField(max_length=50, null=True, unique=True)
 	text = models.TextField()
+	image = models.ImageField(upload_to='images/', null=True)
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
 
